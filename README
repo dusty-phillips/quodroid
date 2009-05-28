@@ -1,0 +1,10 @@
+Quodroid is a small desktop server that interacts with quod libet and a small
+android client to talk to the server -- it serves as a remote for your android
+phone.
+
+Its currently very alpha, it works fine but the code is ugly, the interface is
+ugly, the error checking an tests are non-existent.
+
+Contact:
+Dusty Phillips
+<dusty@linux.ca>

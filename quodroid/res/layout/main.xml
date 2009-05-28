@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+<TextView  
+    android:id="@+id/status_text"
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:text="Hello World, Quodroid"
+    />
+<Button
+    android:id="@+id/prev_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Prev"
+    />
+<Button
+    android:id="@+id/pause_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Pause"
+    />
+<Button
+    android:id="@+id/next_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Next"
+    />
+</LinearLayout>
+
