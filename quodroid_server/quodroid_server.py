@@ -3,7 +3,7 @@ import subprocess
 from quodlibet import const
 
 urls = (
-        '/(prev|next|play-pause)/', 'QuodControl',
+        '/(previous|next|play-pause)/', 'QuodControl',
         )
 
 class QuodControl(object):
