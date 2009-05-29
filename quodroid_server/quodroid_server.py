@@ -1,36 +1,17 @@
 import web
 import subprocess
+from quodlibet import const
 
 urls = (
-        '/prev/', 'Previous',
-        '/next/', 'Next',
-        '/pause/', 'Pause',
+        '/(prev|next|play-pause)/', 'QuodControl',
         )
 
-class Previous(object):
-    def GET(self):
-        # quod is python, should put this whole shebang in a plugin
-        # for now, subprocess it
-        command = "/usr/bin/quodlibet --previous"
-        retcode = subprocess.call(command, shell=True)
-        return('previous')
-
-class Next(object):
-    def GET(self):
-        # quod is python, should put this whole shebang in a plugin
-        # for now, subprocess it
-        command = "/usr/bin/quodlibet --next"
-        retcode = subprocess.call(command, shell=True)
-        return('next')
-
-class Pause(object):
-    def GET(self):
-        # quod is python, should put this whole shebang in a plugin
-        # for now, subprocess it
-        command = "/usr/bin/quodlibet --play-pause"
-        retcode = subprocess.call(command, shell=True)
-        return('pause')
-
+class QuodControl(object):
+    def GET(self, control):
+        f = file(const.CONTROL, "w")
+        f.write(control)
+        f.close()
+        return(control)
 
 app = web.application(urls, globals())
 
