@@ -1,5 +1,4 @@
-* github
-* clean up interface
-* volume
-* put the server in quodlibet plugin
-* not hard coded
+* rc.d startup script
+* not hard coded IP
+* Add LICENSE
+* Add status line
