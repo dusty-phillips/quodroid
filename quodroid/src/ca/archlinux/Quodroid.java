@@ -24,6 +24,10 @@ public class Quodroid extends Activity {
                 new ButtonAction("next"));
         findViewById(R.id.pause_button).setOnClickListener(
                 new ButtonAction("play-pause"));
+        findViewById(R.id.volumeup_button).setOnClickListener(
+                new ButtonAction("volume-up"));
+        findViewById(R.id.volumedown_button).setOnClickListener(
+                new ButtonAction("volume-down"));
 
         status_text = (TextView) findViewById(R.id.status_text);
     }

@@ -15,6 +15,8 @@ public final class R {
         public static final int pause_button=0x7f040002;
         public static final int prev_button=0x7f040001;
         public static final int status_text=0x7f040000;
+        public static final int volumedown_button=0x7f040005;
+        public static final int volumeup_button=0x7f040004;
     }
     public static final class layout {
         public static final int main=0x7f020000;
