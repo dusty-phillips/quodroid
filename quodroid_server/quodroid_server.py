@@ -1,3 +1,4 @@
+#! /usr/bin/env python
 # Copyright (c) 2009 Dusty Phillips <dusty@linux.ca>
 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
