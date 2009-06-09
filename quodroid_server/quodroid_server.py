@@ -1,6 +1,8 @@
 import web
 from quodlibet import const
 
+STATUS_FORMAT = ('%(title)s - %(artist)s')
+
 urls = (
         '/(previous|next|play-pause|volume-up|volume-down)/', 'QuodControl',
         )
@@ -20,6 +22,10 @@ class QuodControl(object):
             control = command_map.get(control, control)
             f.write(control)
 
+        with file(const.CURRENT) as f:
+            info = dict([line.strip().split('=') for line in f])
+
+        return(STATUS_FORMAT % info)
 
 app = web.application(urls, globals())
 
