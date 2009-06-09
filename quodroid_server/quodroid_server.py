@@ -1,5 +1,4 @@
 import web
-import subprocess
 from quodlibet import const
 
 urls = (
