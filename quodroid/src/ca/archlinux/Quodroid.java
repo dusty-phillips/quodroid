@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
 import android.view.View;
+import android.view.Menu;
+import android.view.MenuItem;
 import java.net.URL;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -13,6 +15,7 @@ public class Quodroid extends Activity {
     /** Called when the activity is first created. */
     private Button prev_button, next_button, pause_button;
     private TextView status_text;
+    public static final int MENU_SETTINGS = Menu.FIRST;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +33,25 @@ public class Quodroid extends Activity {
                 new ButtonAction("volume-down"));
 
         status_text = (TextView) findViewById(R.id.status_text);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        boolean result = super.onCreateOptionsMenu(menu);
+
+        menu.add(0, MENU_SETTINGS, 0, R.string.menu_settings);
+
+        return result;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+        case MENU_SETTINGS:
+            return true;
+        }
+       
+        return super.onOptionsItemSelected(item);
     }
 
     private class ButtonAction implements Button.OnClickListener {
