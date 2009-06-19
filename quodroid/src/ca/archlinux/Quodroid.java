@@ -3,6 +3,7 @@ package ca.archlinux;
 import android.app.Activity;
 import android.os.Bundle;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.widget.Button;
 import android.widget.TextView;
 import android.view.View;
@@ -69,7 +70,11 @@ public class Quodroid extends Activity {
         @Override
         public void onClick(View view) {
             try {
-                URL url = new URL("http://192.168.1.110:9250/" + 
+                SharedPreferences settings = getSharedPreferences(
+                        QuodroidSettings.PREFS_NAME, 0);
+                String host = settings.getString("host", "192.168.1.110");
+                String port = settings.getString("port", "9250");
+                URL url = new URL("http://" + host + ":" + port + "/" + 
                         action + "/");
                 String response = new BufferedReader(
                         new InputStreamReader(url.openStream())).readLine();
