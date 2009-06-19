@@ -14,11 +14,12 @@ public final class R {
         public static final int quodlibet=0x7f020000;
     }
     public static final class id {
+        public static final int host=0x7f050006;
         public static final int next_button=0x7f050003;
         public static final int pause_button=0x7f050002;
+        public static final int port=0x7f050007;
         public static final int prev_button=0x7f050001;
         public static final int status_text=0x7f050000;
-        public static final int status_text2=0x7f050006;
         public static final int volumedown_button=0x7f050005;
         public static final int volumeup_button=0x7f050004;
     }
