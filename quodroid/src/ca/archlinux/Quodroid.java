@@ -81,7 +81,7 @@ public class Quodroid extends Activity {
                 status_text.setText(response);
             }
             catch (Exception e) {
-                status_text.setText("error");
+                status_text.setText(e.toString());
             }
         }
     }
