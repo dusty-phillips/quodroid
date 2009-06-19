@@ -63,7 +63,7 @@ public class Quodroid extends Activity {
         @Override
         public void onClick(View view) {
             try {
-                URL url = new URL("http://192.168.1.110:8000/" + 
+                URL url = new URL("http://192.168.1.110:9250/" + 
                         action + "/");
                 String response = new BufferedReader(
                         new InputStreamReader(url.openStream())).readLine();
