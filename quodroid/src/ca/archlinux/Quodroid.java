@@ -2,6 +2,7 @@ package ca.archlinux;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.content.Intent;
 import android.widget.Button;
 import android.widget.TextView;
 import android.view.View;
@@ -11,11 +12,14 @@ import java.net.URL;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
+import ca.archlinux.QuodroidSettings;
+
 public class Quodroid extends Activity {
     /** Called when the activity is first created. */
     private Button prev_button, next_button, pause_button;
     private TextView status_text;
-    public static final int MENU_SETTINGS = Menu.FIRST;
+    private static final int ACTIVITY_CREATE=0;
+    private static final int MENU_SETTINGS = Menu.FIRST;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,6 +52,8 @@ public class Quodroid extends Activity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
         case MENU_SETTINGS:
+            Intent i = new Intent(this, QuodroidSettings.class);
+            startActivityForResult(i, ACTIVITY_CREATE);
             return true;
         }
        
